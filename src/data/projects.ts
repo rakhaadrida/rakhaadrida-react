@@ -5,7 +5,7 @@ import CahayaPrimaLestari from "../assets/images/landing/cahayaprimalestari.png"
 import Nutrilab from "../assets/images/landing/nutrilab.png";
 import AnkaStory from "../assets/images/landing/ankastory.jpg";
 
-export interface Project {
+interface Project {
     id: string;
     image: string;
     imageAlt: string;

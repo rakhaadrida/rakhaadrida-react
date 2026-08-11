@@ -1,6 +1,6 @@
 import "./Project.css";
 import projectItems from "../../../data/projects";
-import ProjectCard from "../../../components/ProjectCard.tsx/ProjectCard";
+import ProjectCard from "../../../components/ProjectCard/ProjectCard";
 
 const Project = () => {
     return (

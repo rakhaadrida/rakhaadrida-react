@@ -1,4 +1,5 @@
 import "./ProjectCard.css";
+import Button from "../Button/Button";
 
 interface ProjectCardProps {
     image: string;
@@ -53,21 +54,23 @@ const ProjectCard = ({
                 </div>
 
                 <div className="project-actions">
-                    <a href="" className="action-primary">
+                    <Button type="link" href="" className="action-primary">
                         <i className="fa fa-arrow-right" />
                         View Project
-                    </a>
+                    </Button>
 
                     {liveUrl && (
-                        <a
+                        <Button
+                            type="link"
                             href={liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="action-secondary"
+                            isExternal
                         >
                             <i className="fa fa-external-link" />
                             Live Preview
-                        </a>
+                        </Button>
                     )}
                 </div>
             </div>
