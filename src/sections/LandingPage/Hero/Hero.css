@@ -1,0 +1,688 @@
+header {
+    background: linear-gradient(135deg, #0f172a 0%, #1a2954 50%, #162555 100%);
+    min-height: 650px;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(90deg, rgba(6, 147, 227, 0.06) 1px, transparent 1px),
+        linear-gradient(rgba(6, 147, 227, 0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+    background-position:
+        0 0,
+        30px 30px;
+    pointer-events: none;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(
+        circle,
+        rgba(6, 147, 227, 0.15) 0%,
+        rgba(6, 147, 227, 0) 70%
+    );
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+header .container {
+    position: relative;
+    z-index: 1;
+}
+
+header .row {
+    align-items: center;
+}
+
+header .title-text {
+    margin-top: 140px;
+    text-align: left;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Intro label with accent */
+header .intro-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #0693e3;
+    padding: 8px 16px;
+    border: 1px solid rgba(6, 147, 227, 0.3);
+    border-radius: 20px;
+    margin-bottom: 24px;
+    animation: slideInDown 0.6s ease-out;
+}
+
+header .hero-greeting {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 16px;
+    animation: slideInDown 0.6s ease-out;
+}
+
+header .greeting-text {
+    font-size: 18px;
+    font-weight: 400;
+    color: #94a3b8;
+    letter-spacing: 0.3px;
+}
+
+header .hero-name {
+    font-family: "Lato", sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    color: #0693e3;
+    letter-spacing: -0.5px;
+}
+
+header .hero-intro {
+    margin-bottom: 8px;
+}
+
+/* Premium headline */
+header .hero-headline {
+    font-family: "Lato", sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.25;
+    color: #f8fafc;
+    margin-bottom: 24px;
+    margin-top: 0;
+    margin-right: 100px;
+    animation: slideInDown 0.8s ease-out 0.1s both;
+}
+
+/* Professional description */
+header .hero-description {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #cbd5e1;
+    margin-bottom: 32px;
+    margin-top: 0;
+    font-weight: 400;
+    max-width: 550px;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+header .image-rounded {
+    border-radius: 24px !important;
+    box-shadow:
+        0 20px 40px rgba(6, 147, 227, 0.25),
+        0 0 80px rgba(6, 147, 227, 0.15),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(6, 147, 227, 0.2);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+header .image-rounded:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 25px 50px rgba(6, 147, 227, 0.3),
+        0 0 100px rgba(6, 147, 227, 0.2),
+        inset 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+/* CTA Button Container */
+header .hero-cta {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Primary Button (View My Work) */
+header .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #0693e3;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 14px 32px;
+    border: 2px solid #0693e3;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(6, 147, 227, 0.3);
+    cursor: pointer;
+}
+
+header .btn-primary:hover {
+    background-color: #0580c8;
+    border-color: #0580c8;
+    box-shadow: 0 8px 25px rgba(6, 147, 227, 0.4);
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header .btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(6, 147, 227, 0.2);
+}
+
+header .btn-primary .btn-icon {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+header .btn-primary:hover .btn-icon {
+    transform: translateX(3px);
+}
+
+/* Secondary Button (Download CV) */
+header .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    color: #041e44;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 14px 32px;
+    border: 2px solid #e2e8f0;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+header .btn-secondary:hover {
+    background-color: #487db2;
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(4, 30, 68, 0.1);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+header .btn-secondary:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(6, 147, 227, 0.1);
+}
+
+header .btn-secondary .btn-icon {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+header .btn-secondary:hover .btn-icon {
+    transform: translateY(2px);
+}
+
+header .pic-avatar {
+    margin-top: 40px;
+    max-width: 320px;
+    max-height: 420px;
+    animation: fadeInRight 0.8s ease-out 0.2s both;
+    position: relative;
+    z-index: 2;
+}
+
+header .pic-avatar .socmed {
+    margin-left: 90px;
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+header .pic-avatar .socmed a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(6, 147, 227, 0.08);
+    border: 1px solid rgba(6, 147, 227, 0.2);
+    transition: all 0.3s ease;
+}
+
+header .pic-avatar .socmed a:hover {
+    background-color: #0693e3;
+    border-color: #0693e3;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(6, 147, 227, 0.3);
+}
+
+header .pic-avatar .socmed img {
+    max-width: 20px;
+    max-height: 20px;
+    transition: filter 0.3s ease;
+}
+
+header .pic-avatar .socmed a:hover img {
+    filter: brightness(2);
+}
+
+@media only screen and (min-width: 1200px) {
+    header .pic-avatar {
+        margin-left: 15px;
+    }
+
+    header .hero-image-section {
+        margin-top: 1.7rem;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    header .hero-image-section {
+        margin-top: -2.1rem;
+    }
+    header .pic-avatar .socmed {
+        margin-left: 85px;
+        gap: 10px;
+    }
+    header .pic-avatar .socmed a {
+        width: 36px;
+        height: 36px;
+    }
+    header .pic-avatar .socmed img {
+        max-width: 18px;
+        max-height: 18px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    header {
+        min-height: 500px;
+    }
+    header .title-text {
+        margin-top: 80px;
+    }
+    header .hero-name {
+        font-size: 32px;
+    }
+    header .hero-headline {
+        font-size: 36px;
+    }
+    header .hero-description {
+        font-size: 14px;
+    }
+    header .btn-primary,
+    header .btn-secondary {
+        font-size: 13px;
+        padding: 10px 24px;
+    }
+    header .hero-image-section {
+        margin-top: -1.7rem;
+    }
+    header .pic-avatar {
+        margin-top: 30px;
+        max-width: 280px;
+        max-height: 370px;
+    }
+    header .pic-avatar .socmed {
+        margin-left: 40px;
+        gap: 10px;
+    }
+    header .pic-avatar .socmed a {
+        width: 36px;
+        height: 36px;
+    }
+    header .pic-avatar .socmed img {
+        max-width: 18px;
+        max-height: 18px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    header {
+        min-height: 380px;
+    }
+    header .title-text {
+        margin-top: 50px;
+    }
+    header .greeting-text {
+        font-size: 14px;
+    }
+    header .hero-name {
+        font-size: 28px;
+    }
+    header .hero-headline {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+    header .hero-description {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+    header .intro-label {
+        font-size: 11px;
+        padding: 6px 12px;
+        margin-bottom: 16px;
+    }
+    header .hero-cta {
+        gap: 12px;
+        margin-top: 20px;
+    }
+    header .btn-primary,
+    header .btn-secondary {
+        font-size: 14px;
+        padding: 11px 24px;
+    }
+    header .hero-image-section {
+        margin-top: 0;
+    }
+    header .pic-avatar {
+        margin-top: 30px;
+        max-width: 220px;
+        max-height: 300px;
+    }
+    header .pic-avatar .socmed {
+        margin-left: 7px;
+        gap: 8px;
+    }
+    header .pic-avatar .socmed a {
+        width: 32px;
+        height: 32px;
+    }
+    header .pic-avatar .socmed img {
+        max-width: 16px;
+        max-height: 16px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    header {
+        min-height: 420px;
+    }
+    header .title-text {
+        text-align: center;
+        margin-top: 40px;
+    }
+    header .hero-greeting {
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+    header .greeting-text {
+        font-size: 13px;
+    }
+    header .hero-name {
+        font-size: 24px;
+    }
+    header .hero-headline {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    header .hero-description {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    header .intro-label {
+        font-size: 10px;
+        padding: 6px 12px;
+        margin-bottom: 12px;
+    }
+    header .hero-cta {
+        gap: 10px;
+        margin-top: 16px;
+        justify-content: center;
+    }
+    header .btn-primary,
+    header .btn-secondary {
+        font-size: 13px;
+        padding: 10px 20px;
+    }
+    header .pic-avatar {
+        margin-top: 20px;
+        max-width: 180px;
+        max-height: 250px;
+    }
+    header .pic-avatar .socmed {
+        margin-left: 0;
+        gap: 8px;
+        justify-content: center;
+    }
+    header .pic-avatar .socmed a {
+        width: 32px;
+        height: 32px;
+    }
+    header .pic-avatar .socmed img {
+        max-width: 16px;
+        max-height: 16px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    header {
+        min-height: 400px;
+    }
+    header .title-text {
+        text-align: center;
+        margin-top: 35px;
+    }
+    header .hero-greeting {
+        justify-content: center;
+        margin-bottom: 10px;
+        gap: 6px;
+    }
+    header .greeting-text {
+        font-size: 12px;
+    }
+    header .hero-name {
+        font-size: 20px;
+    }
+    header .hero-headline {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+    header .hero-description {
+        font-size: 13px;
+        margin-bottom: 16px;
+    }
+    header .intro-label {
+        font-size: 9px;
+        padding: 5px 10px;
+        margin-bottom: 10px;
+    }
+    header .hero-cta {
+        gap: 8px;
+        margin-top: 14px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    header .btn-primary,
+    header .btn-secondary {
+        font-size: 12px;
+        padding: 9px 18px;
+    }
+    header .pic-avatar {
+        margin-top: 16px;
+        max-width: 160px;
+        max-height: 220px;
+    }
+    header .pic-avatar .socmed {
+        margin-left: 0;
+        gap: 6px;
+        justify-content: center;
+    }
+    header .pic-avatar .socmed a {
+        width: 30px;
+        height: 30px;
+    }
+    header .pic-avatar .socmed img {
+        max-width: 14px;
+        max-height: 14px;
+    }
+}
+
+@media only screen and (max-width: 383px) {
+    header {
+        min-height: 425px;
+    }
+    header .btn-cv {
+        max-width: 203px;
+        margin-left: -190px;
+        margin-top: 10px !important;
+        font-size: 16px;
+        padding: 7px 15px;
+    }
+    header .btn-more {
+        max-width: 203px;
+        margin-left: -140px;
+        margin-top: 120px !important;
+        font-size: 16px;
+        padding: 7px 11px;
+    }
+    header .pic-avatar {
+        margin-left: 170px;
+        margin-top: -150px;
+        max-width: 160px;
+        max-height: 261px;
+    }
+    header .pic-avatar .socmed {
+        margin-left: 7px;
+    }
+    header .pic-avatar .socmed img {
+        margin-top: 15px;
+        margin-right: 8px;
+        max-width: 15px;
+        max-height: 15px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    header > .container > .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header > .container > .row > [class*="col-"] {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    header > .container > .row > [class*="col-"]:first-child {
+        order: 1;
+    }
+
+    header > .container > .row > [class*="col-"]:last-child {
+        order: 2;
+    }
+
+    header .title-text,
+    header .hero-cta {
+        width: 100%;
+        text-align: center;
+    }
+
+    header .hero-greeting {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    header .hero-headline,
+    header .hero-description {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 34rem;
+    }
+
+    header .hero-cta {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    header .pic-avatar {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: min(100%, 270px);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    header .pic-avatar > img {
+        display: block;
+        float: none !important;
+        width: 100%;
+        height: auto;
+    }
+
+    header .pic-avatar .socmed {
+        justify-content: center;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    header {
+        min-height: 0;
+        padding: 42px 20px 48px;
+    }
+
+    header .title-text {
+        margin-top: 0;
+        text-align: center;
+    }
+
+    header .hero-cta {
+        align-items: stretch;
+        flex-direction: column;
+        width: min(100%, 280px);
+        margin: 22px auto 0;
+    }
+
+    header .btn-primary,
+    header .btn-secondary,
+    header .btn-cv,
+    header .btn-more {
+        width: 100%;
+        max-width: none;
+        margin: 0 !important;
+        text-align: center;
+    }
+
+    header .pic-avatar {
+        display: block;
+        margin: 34px auto 0;
+        max-width: min(220px, 72vw);
+        max-height: none;
+    }
+
+    header .pic-avatar .socmed {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 16px 0 0;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    header {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    header .hero-name,
+    header .hero-headline {
+        overflow-wrap: anywhere;
+    }
+}
