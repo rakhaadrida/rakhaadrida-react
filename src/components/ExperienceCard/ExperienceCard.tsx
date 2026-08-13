@@ -1,3 +1,4 @@
+import "./ExperienceCard.css";
 import Button from "../Button/Button";
 
 interface ExperienceLink {
